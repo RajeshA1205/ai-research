@@ -1,0 +1,35 @@
+[project]
+name = "transformer"
+version = "0.1.0"
+description = "From-scratch PyTorch implementation of 'Attention Is All You Need' (Vaswani et al., 2017)."
+readme = "README.md"
+authors = [
+    { name = "RajeshA1205", email = "rajeshamudhakumar@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.4.4",
+    "torch>=2.11.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "ruff>=0.15.12",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E741"]  # ambiguous variable name (we use 'l' for layers etc.)

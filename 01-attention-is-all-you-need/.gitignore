@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+.claude/
+
+# Training artifacts
+runs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+.pytest_cache/
+.ruff_cache/
